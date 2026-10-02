@@ -1,0 +1,369 @@
+body {
+    scroll-behavior: smooth;
+}
+
+.my-nav {
+    background-color: rgb(8, 42, 39) !important;
+    padding-bottom: 1px !important;
+    padding-top: 1px !important;
+}
+
+.my-nav .nav-link {
+    color: rgb(204, 161, 77);
+    transition: 0.1s;
+}
+
+.my-nav .nav-link.active {
+    color: rgb(204, 161, 77);
+}
+
+.my-nav .nav-link:hover {
+    color: rgb(255, 210, 46);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.visitor-display {
+    margin-left: 5px;
+    color: rgb(204, 161, 77);
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+
+.navbr {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.fa-cart-shopping:hover {
+    color: rgb(255, 210, 46);
+    cursor: pointer;
+}
+
+.info {
+    height: auto;
+    background-color: rgb(8, 42, 39) !important;
+    padding: 10px;
+    display: flex;
+    gap: 100px;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+}
+
+.info img {
+    object-fit: cover;
+    height: 100%;
+    width: 40%;
+    border-radius: 20px;
+}
+
+.infotext {
+    height: auto;
+    width: 70%;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center !important;
+    justify-content: center;
+}
+
+.infotext p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+}
+
+.luxury {
+    height: auto;
+    background-color: rgb(8, 42, 39) !important;
+    padding: 10px;
+    display: flex;
+    gap: 100px;
+    align-items: center;
+
+}
+
+.luxury img {
+    object-fit: cover;
+    margin-top: 100px;
+    height: 100%;
+    width: 40%;
+    border-radius: 20px;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.luxury button {
+    padding: 5px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: rgb(8, 42, 39);
+    background-color: rgb(204, 161, 77);
+    transition: 0.3s;
+}
+
+.luxury button:hover {
+    background-color: rgb(8, 42, 39) !important;
+    box-shadow: 0px 0px 10px black;
+    color: white !important;
+
+}
+
+.luxury a:hover {
+    color: rgb(204, 161, 77);
+}
+
+
+.luxury a {
+    color: rgb(8, 42, 39);
+    text-decoration: none;
+}
+
+.gallery {
+    background-color: rgb(8, 42, 39) !important;
+    ;
+    padding: 20px;
+}
+
+.gallery-card {
+    height: 300px;
+
+}
+
+.gallery-card img {
+    object-fit: cover;
+    object-position: 50% 15%;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.504);
+}
+
+.locatehead {
+    background-image: url("images/locate.jpg");
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    text-align: center;
+    color: white;
+    align-content: center;
+}
+
+.location iframe {
+    object-fit: cover;
+    width: 100%;
+
+}
+
+.foot {
+    background-color: rgb(204, 161, 77);
+    ;
+    ;
+    height: auto;
+    color: white;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 2px;
+}
+
+.foot li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.foot .box {
+    width: 30%;
+}
+
+.foot .box a {
+    color: white;
+    text-decoration: none;
+}
+
+.foot .box a:hover {
+    text-shadow: 0px 0px 10px white;
+    color: rgb(8, 42, 39);
+}
+
+.up,
+.upicon {
+    font-size: 50px;
+    color: rgb(255, 255, 255) !important;
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    scroll-behavior: smooth;
+    transition: 0.2s;
+}
+
+.upicon:hover {
+    transform: translateY(-5px);
+    color: rgba(16, 64, 61, 0.937) !important;
+}
+
+i {
+    color: rgb(204, 161, 77);
+}
+
+.foot i {
+    color: rgb(8, 42, 39);
+}
+
+.socials {
+    padding: 0px;
+    font-size: large;
+}
+
+@media screen and (max-width: 800px) {
+    .info {
+        display: block;
+        text-align: center;
+    }
+
+    .info img {
+        margin-bottom: 5%;
+    }
+
+    .luxury {
+        display: block;
+        text-align: center;
+    }
+
+    .luxury img {
+        margin-bottom: 10%;
+    }
+
+    .foot .box {
+        width: 50%;
+        overflow-wrap: break-word;
+    }
+
+    .foot .b3 {
+        padding: 20px !important;
+        margin-left: 0 !important;
+    }
+
+    .foot ul {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .navbr {
+        display: block;
+    }
+}
+
+/* shop.html css */
+
+.productimg {
+    height: 300px;
+    background-image: url(images/productimg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    align-content: center;
+    color: rgb(245, 208, 1);
+    animation: blink 5s infinite ease-out;
+}
+
+.productimg h1 {
+    font-size: 80px;
+}
+
+@keyframes blink {
+    0% {
+        color: rgb(245, 208, 1);
+    }
+
+    50% {
+        color: brown;
+    }
+
+    100% {
+        color: rgb(245, 208, 1);
+    }
+}
+
+.shoppage h1 {
+    margin: 3%;
+    color: goldenrod;
+    padding: 10px;
+}
+
+.cardsec {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+
+.bg {
+    background-color: rgb(8, 42, 39);
+}
+
+.card .btn{
+    background-color: rgb(8, 42, 39);
+    border: none;
+    color: goldenrod;
+}
+.card{
+   transition: 0.2s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.04);
+    
+}
+
+/* scrollbar */
+.bottom-scroll-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: rgb(255, 255, 255);
+  color: rgb(8, 42, 39);
+  overflow: hidden;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-content {
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 500;
+  padding-left: 100%;
+  animation: scrollBar 15s linear infinite;
+}
+
+@keyframes scrollBar {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}

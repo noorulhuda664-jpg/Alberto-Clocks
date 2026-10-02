@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alberto Clocks</title>
+  <link rel="shortcut icon" href="images/pngtree-clock-icon-simple-flat-vector-png-image_12244605.png"
+    type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+    integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary my-nav">
+    <div class="container-fluid">
+      <div class="logo-area">
+  <a class="navbar-brand" href="index.html">
+    <img src="images/pngtree-clock-icon-simple-flat-vector-png-image_12244605.png"
+      alt="Alberto Clocks" width="50" height="50">
+  </a>
+
+  <span class="visitor-display">
+    👥 <span id="visitorCount">0</span>
+  </span>
+</div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse navbr" id="navbarNavDropdown">
+        <div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html" id="home">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Shop
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="shop.html">Luxury</a></li>
+                <li><a class="dropdown-item" href="shop.html">Vintage</a></li>
+                <li><a class="dropdown-item" href="shop.html">Smart Watches</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#location">Store Locator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </li>
+          </ul>
+        </div>
+        <li><i class="fa-solid fa-cart-shopping"></i></li>
+      </div>
+
+  </nav>
+  <!-- Carousel -->
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/luxury.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/vintage.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="images/smart.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+  </div>
+  <!-- Alberto Description Box -->
+  <div class="container-fluid info" id="about">
+
+    <img src="images/infobox.jpg" alt="">
+    <div class="container infotext">
+      <h1>Alberto Watches</h1>
+      <p>
+        Welcome to Alberto Watches, your destination for stylish, reliable, and timeless watches designed for modern
+        everyday life. We bring together a carefully selected collection of men’s and women’s watches that combine
+        elegant design, quality craftsmanship, comfort, and contemporary style.
+
+        At Alberto Watches, we believe a watch is more than a way to tell time — it is an essential part of your
+        personal style. Whether you are looking for a sophisticated watch for a formal occasion, a classic everyday
+        timepiece, or a modern watch to complete a casual look, our collection offers styles to suit different tastes
+        and occasions.
+
+        We are committed to making quality watches accessible while providing a smooth and dependable shopping
+        experience. Every timepiece in our collection is selected with attention to design, functionality, durability,
+        and everyday comfort.
+
+        Serving customers in Pakistan and beyond, Alberto Watches makes it easy to discover watches that fit your
+        lifestyle and personal aesthetic. Explore our collection and find a timepiece that makes every moment count.
+        <br>
+
+        Alberto Watches — Timeless style. Modern sophistication. Made for every moment.
+      </p>
+    </div>
+
+
+  </div>
+  <!-- luxury desc -->
+  <div class="container-fluid luxury" id="luxury">
+
+    <img src="images/3d lux.png" alt="">
+    <div class="container infotext">
+      <h1>Luxury Collection</h1>
+      <p>Discover our exclusive Luxury Watches Collection, where timeless elegance meets exceptional craftsmanship. Each
+        timepiece is thoughtfully designed with refined details, premium finishes, and a sophisticated presence. Made
+        for those who appreciate style, precision, and distinction, our collection adds a touch of luxury to every
+        moment.</p>
+      <button><a href="shop.html">Shop Now</a></button>
+    </div>
+  </div>
+
+  <!-- vintage desc -->
+  <div class="container-fluid luxury" id="vintage">
+
+    <img src="images/IMG-Photoroom.png" alt="">
+    <div class="container infotext">
+      <h1>Vintage Collection</h1>
+      <p>Discover timeless elegance with our vintage watch collection, where classic design meets enduring
+        craftsmanship. Each timepiece carries a unique character inspired by the beauty of a bygone era. From refined
+        details to iconic styles, these watches are made to make a lasting impression. Wear a piece of history and let
+        your style tell the story.</p>
+      <button><a href="shop.html">Shop Now</a></button>
+    </div>
+  </div>
+
+  <!-- smartwatch desc -->
+  <div class="container-fluid luxury" id="smartwatch">
+
+    <img src="images/smart.png" alt="">
+    <div class="container infotext">
+      <h1>Smart Watches</h1>
+      <p>Stay connected, active, and effortlessly stylish with our modern smartwatch collection. Designed to blend smart
+        technology with sleek, contemporary style, each watch keeps you in control wherever you go. From everyday
+        essentials to fitness tracking, enjoy features built for your lifestyle. Smart, versatile, and made for every
+        moment.</p>
+      <button><a href="shop.html ">Shop Now</a></button>
+    </div>
+  </div>
+
+  <!-- gallery -->
+  <div class="container-fluid gallery" id="gallery">
+    <div class="row g-3">
+      <div class="col-lg-4 gallery-card">
+        <img src="images/gallerycard1.jpeg" alt="" srcset="">
+      </div>
+      <div class="col-lg-4 gallery-card">
+        <img src="images/gallerycard2.jpg" alt="" srcset="">
+      </div>
+      <div class="col-lg-4 gallery-card">
+        <img src="images/gallerycard3.jpg" alt="" style="object-position: 50% 60%;">
+      </div>
+      <div class="col-lg-4 gallery-card">
+        <img src="images/gallerycard4.jpeg" alt="" style="object-position: center;">
+      </div>
+      <div class="col-lg-4 gallery-card">
+        <img src="images/gallerycard5.jpg" alt="" style="object-position: center;">
+      </div>
+      <div class="col-lg-4 gallery-card">
+        <img src="images/gallerycard6.jpeg" alt="" style="object-position: center;">
+      </div>
+      <div class="col-lg-4 gallery-card">
+        <img src="images/gallerycard7.jpg" alt="">
+      </div>
+      <div class="col-lg-4 gallery-card">
+        <img src="images/gallerycard9.jpg" alt="" style="object-position: 50% 90%;">
+      </div>
+      <div class="col-lg-4 gallery-card">
+        <img src="images/gallerycard8.jpg" alt="">
+      </div>
+      <div class="col-lg-4 gallery-card">
+        <img src="images/gallerycard10.jpeg" alt="">
+      </div>
+      <div class="col-lg-4 gallery-card">
+        <img src="images/gallerycard12.jpg" alt="">
+      </div>
+      <div class="col-lg-4 gallery-card">
+        <img src="images/gallerycard11.jpeg" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- store locator -->
+  <div class="container-fluid locatehead" id="location">
+    <h1>
+      Find Us
+    </h1>
+  </div>
+  <div class="container-fluid luxury">
+
+    <div class="container infotext">
+      <h4 style="color: rgb(204, 161, 77);">Address</h4>
+      <p><i class="fa-solid fa-location-dot"></i> Dolmen City, HC-3, Marine Promenade, Block 4 Clifton, Karachi 75600
+        Pakistan</p>
+      <p><i class="fa-solid fa-location-dot"></i> Port Grand Food Street road opposite PNSC Building, Karachi 74000
+        Pakistan</p>
+      <p><i class="fa-solid fa-location-dot"></i> V26H+88F, V27G+C2Q Aga Khan III Road Garden, Road, Saddar Preedy
+        Quarters, Karachi, Pakistan</p>
+
+      <h4 style="color: rgb(204, 161, 77);">Working Hours</h4>
+      <h6><i class="fa-solid fa-clock"></i> Monday - Thursday & Saturday</h6>
+      <p>10:00 AM - 11:00 PM</p>
+      <h6><i class="fa-solid fa-clock"></i> Friday & Sunday</h6>
+      <p>03:00 PM - 11:00 PM</p>
+    </div>
+
+    <div class="container location">
+
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28970.659380620782!2d66.99906293286942!3d24.818302989206536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33dbbdc1875bf%3A0x6a6572ab3a66fed8!2sClifton%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1790829533099!5m2!1sen!2s"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </div>
+
+  </div>
+
+
+  <!-- footer -->
+  <footer>
+
+    <div class="container-fluid foot" id="contact">
+      <div class="container box">
+        <h3 style="color: rgb(8, 42, 39);;"><img
+            src="images/pngtree-clock-icon-simple-flat-vector-png-image_12244605.png" alt="" width="50px" height="50px">
+          Alberto Clocks</h3>
+        <br>
+        <ul>
+          <li><i class="fa-brands fa-whatsapp"></i> +92-3093558982</li>
+          <li><i class="fa-brands fa-whatsapp"></i> +92-3093558442</li>
+          <li> <i class="fa-brands fa-whatsapp"></i>+92-2223558982</li>
+          <li> <i class="fa-solid fa-phone"></i>+92-3032558982</li>
+          <li> <i class="fa-solid fa-phone"></i>+92-3333558982</li>
+          <li><i class="fa-solid fa-phone"></i> +92-5593558982</li>
+        </ul>
+        <br>
+        <ul>
+          <li><i class="fa-solid fa-envelope"></i>contact@albertoclocks.com</li>
+        </ul>
+      </div>
+      <div class="container box">
+        <ul>
+          <br><br><br>
+
+          <p><i class="fa-solid fa-location-dot"></i>Dolmen City, HC-3, Marine Promenade, Block 4 Clifton, Karachi 75600
+            Pakistan</p>
+          <p><i class="fa-solid fa-location-dot"></i>Port Grand Food Street road opposite PNSC Building, Karachi 74000
+            Pakistan</p>
+          <p><i class="fa-solid fa-location-dot"></i>V26H+88F, V27G+C2Q Aga Khan III Road Garden, Road, Saddar Preedy
+            Quarters, Karachi, Pakistan</p>
+        </ul>
+      </div>
+      <div class="container box b3" style="padding: 50px; margin-left: 10%;">
+        <br>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#luxury">Luxury Watches</a></li>
+        <li><a href="#vintage">Vintage Watches</a></li>
+        <li><a href="#smartwatch">Smart Watches</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <br>
+        <ul class="socials">
+          <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.messenger.com/" target="_blank"><i class="fa-brands fa-facebook-messenger"></i></a>
+          <a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://api.whatsapp.com/" target="_blank"><i class="fa-brands fa-square-whatsapp"></i></a>
+        </ul>
+      </div>
+      <a href="#home" class="up"><i class="fa-solid fa-circle-up upicon"></i></a>
+
+    </div>
+
+
+
+
+  </footer>
+<!-- Scrolling Bottom Bar -->
+<div class="bottom-scroll-bar">
+  <div class="scroll-content">
+    📍 <span id="userlocation">Getting location...</span>
+    🕐 <span id="liveTime">00:00:00</span>
+  </div>
+</div>
+
+
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+  crossorigin="anonymous">
+</script>
+
+
+<!-- Your JavaScript -->
+<script>
+  // Visitor count
+  let visitors = localStorage.getItem("visitorCount");
+
+  if (!visitors) {
+    visitors = 1;
+  } else {
+    visitors = Number(visitors) + 1;
+  }
+
+  localStorage.setItem("visitorCount", visitors);
+
+  document.getElementById("visitorCount").textContent = visitors;
+
+
+  // Live Pakistan time
+  function updateTime() {
+    const time = new Date().toLocaleTimeString("en-PK", {
+      timeZone: "Asia/Karachi",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit"
+    });
+
+    document.getElementById("liveTime").textContent = time;
+  }
+
+  updateTime();
+
+  setInterval(updateTime, 1000);
+
+  function getLocation() {
+    const locationText = document.getElementById("userlocation");
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                locationText.textContent =
+                    `Lat: ${latitude.toFixed(4)}, Long: ${longitude.toFixed(4)}`;
+            },
+            function(error) {
+                locationText.textContent = "Location unavailable";
+                console.log(error);
+            }
+        );
+    } else {
+        locationText.textContent = "Geolocation not supported";
+    }
+}
+
+getLocation();
+</script>
+
+</body>
+</html>

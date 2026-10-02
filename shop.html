@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alberto Clocks</title>
+  <link rel="shortcut icon" href="images/pngtree-clock-icon-simple-flat-vector-png-image_12244605.png"
+    type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+    integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary my-nav">
+    <div class="container-fluid">
+      <div class="logo-area">
+  <a class="navbar-brand" href="index.html">
+    <img src="images/pngtree-clock-icon-simple-flat-vector-png-image_12244605.png"
+      alt="Alberto Clocks" width="50" height="50">
+  </a>
+
+  <span class="visitor-display">
+    👥 <span id="visitorCount">0</span>
+  </span>
+</div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+      </button>
+      <div class="collapse navbar-collapse navbr" id="navbarNavDropdown">
+        <div>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html" id="home">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Shop
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="shop.html">Luxury</a></li>
+                <li><a class="dropdown-item" href="shop.html">Vintage</a></li>
+                <li><a class="dropdown-item" href="shop.html">Smart Watches</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#location">Store Locator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#gallery">Gallery</a>
+            </li>
+          </ul>
+        </div>
+        <li><i class="fa-solid fa-cart-shopping"></i></li>
+      </div>
+  </nav>
+  <!-- header image -->
+  <div class="container-fluid productimg">
+    <h1>Timepiece Sale — Shop Now</h1>
+  </div>
+  <div class="container-fluid bg">
+    <section class="shoppage">
+      <!-- luxuxry watches -->
+      <h1 style="text-align: center; margin-top: 0;">Luxury Collection</h1>
+      <div class="container-fluid cardsec">
+        <div class="row w-100">
+          <!-- luxury product 1 -->
+          <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+            <div class="card" style="width:90%;">
+              <img src="images/luxwatch1.jpg" class="card-img-top"
+                style="width: 100%; height: 60%; object-fit: contain;" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Classic Fusion - Titanium Green 38mm</h5>
+                <p class="card-text">Rs 20000</p>
+                <span class="productbtn">
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <!-- info button -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal1">
+                    Info
+                  </button>
+
+                  <!--product info  -->
+                  <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModalLabel1"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="productModalLabel1" style="text-align: center;">Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Details<br>
+                          Brand: Hublot<br>
+                          Collection: Classic Fusion<br>
+                          Gender: Women's<br>
+                          Movement:UB1110 Self-winding<br>
+                          Crystal: Sapphire with Anti-reflective Treatment<br>
+                          Case Material: Satin-finished and Polished Titanium<br>
+                          Case Size (mm): 38
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- luxury product 2 -->
+          <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+            <div class="card" style="width: 90%;">
+              <img src="images/luxwatch2.jpg" class="card-img-top" style="width: 100%; height: 60%;object-fit: contain;"
+                alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Seamaster - Master Chronometer - 44mm</h5>
+                <p class="card-text">Rs.3,413,000</p>
+                <span class="productbtn">
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <!-- info button -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal2">
+                    Info
+                  </button>
+
+                  <!--product info  -->
+                  <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModalLabel2"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="productModalLabel2">Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          This Omega Seamaster - CO‑AXIAL MASTER CHRONOMETER CHRONOGRAPH watch has a 44mm stainless
+                          steel case. This model also features an automatic movement, stainless steel bracelet, sapphire
+                          crystal and a Black dial with hands and indexes are filled with white Super-LumiNova. It has a
+                          water resistance of 300m
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- luxury product 3 -->
+          <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+            <div class="card" style="width: 90%;">
+              <img src="images/luxwatch3.jpg" style="width: 100%; height: 60%; object-fit: contain;"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">De Ville Prestige - Chronometer - 39mm</h5>
+                <p class="card-text">Rs.3,618,000</p>
+                <span class="productbtn">
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <!-- info button -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal3">
+                    Info
+                  </button>
+
+                  <!--product info  -->
+                  <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModalLabel3"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="productModalLabel3">Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          This Omega De Ville PRESTIGE - CO-AXIAL CHRONOMETER watch has a 39.5mm stainless steel 18K
+                          Yellow gold case. This model also features an automatic movement, stainless steel bracelet
+                          with yellow gold, sapphire anti-reflective crystal and a sun-brushed champagne dial with
+                          diamonds. It has a water resistance of 30m
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- luxury product 4 -->
+          <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+            <div class="card" style="width: 90%;">
+              <img src="images/luxwatch4.jpg" style="width: 100%; height: 60%; object-fit: contain;"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Aquis Date Calibre 400</h5>
+                <p class="card-text">Rs.1,492,000</p>
+                <br>
+                <span class="productbtn">
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <!-- info button -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal4">
+                    Info
+                  </button>
+
+                  <!--product info  -->
+                  <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModalLabel4"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="productModalLabel4">Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          This Oris Aquis Date Calibre 400 watch has a 43mm stainless steel case. This model also
+                          features an automatic movement, stainless steel bracelet, sapphire crystal and a Blue dial. It
+                          has a water resistance of 300m
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- vintage watches -->
+        <br><br>
+        <h1 style="text-align: center;">Vintage Collection</h1>
+        <br>
+        <div class="row w-100">
+          <!-- vintage1 -->
+          <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+            <div class="card" style="width:90%;">
+              <img src="images/vintage1.jpg" class="card-img-top" style="width: 100%; height: 60%; object-fit: contain;"
+                alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Vintage Givenchy Roman white dial & Leather strap watch</h5>
+                <p class="card-text">Rs 28000</p>
+                <span class="productbtn">
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <!-- info button -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal5">
+                    Info
+                  </button>
+
+                  <!--product info  -->
+                  <div class="modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModalLabel5"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="productModalLabel5" style="text-align: center;">Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          • Dial size: 28mm approx
+                          • Strap Replaced & Buckle original Givenchy - Fits wrists 13-20cm
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- vintage2-->
+          <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+            <div class="card" style="width: 90%;">
+              <img src="images/vintage2.jpg" class="card-img-top" style="width: 100%; height: 60%;object-fit: contain;"
+                alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Boston Club Tank Vintage Watch for women</h5>
+                <p class="card-text">Rs.18,000.00</p>
+                <span class="productbtn">
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <!-- info button -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal6">
+                    Info
+                  </button>
+
+                  <!--product info  -->
+                  <div class="modal fade" id="productModal6" tabindex="-1" aria-labelledby="productModalLabel6"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="productModalLabel6">Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">• Movement: Quartz (battery-operated)- Working
+                          • Style: Classic, dress, vintage
+                          • Dial size : 20mm approx
+                          • wrist size : 13-17mm adjustable
+                          • Strap : High quality leather Aftermarket
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- vintage3 -->
+          <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+            <div class="card" style="width: 90%;">
+              <img src="images/vintage3.jpg" style="width: 100%; height: 60%; object-fit: contain;" class="card-img-top"
+                alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Vintage Seiko women’s leather strap watch</h5>
+                <p class="card-text">Rs.9,500.00</p>
+                <br>
+                <span class="productbtn">
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <!-- info button -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal7">
+                    Info
+                  </button>
+
+                  <!--product info  -->
+                  <div class="modal fade" id="productModal7" tabindex="-1" aria-labelledby="productModalLabel7"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="productModalLabel7">Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          Brand: Seiko
+                          • Style: Classic, dress, vintage
+                          • Dial size : 22mm approx
+                          • wrist size : 14-19cm adjustable
+                          • Strap : High quality leather - Aftermarket
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- vintage4 -->
+          <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+            <div class="card" style="width: 90%;">
+              <img src="images/vintage4.jpg" style="width: 100%; height: 60%; object-fit: contain;" class="card-img-top"
+                alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Vintage Salvador Dali Exaequo,Rare Gold plated</h5>
+                <p class="card-text">Rs.230,000.00 </p>
+                <span class="productbtn">
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <!-- info button -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal8">
+                    Info
+                  </button>
+
+                  <!--product info  -->
+                  <div class="modal fade" id="productModal8" tabindex="-1" aria-labelledby="productModalLabel8"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="productModalLabel8">Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          This Oris Aquis Date Calibre 400 watch has a 43mm stainless steel case. This model also
+                          features an automatic movement, stainless steel bracelet, sapphire crystal and a Blue dial. It
+                          has a water resistance of 300m
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- smartwatches -->
+        <br><br>
+        <h1 style="text-align: center;">Smart Watches</h1>
+        <br><br>
+
+        <div class="row w-100">
+          <!-- smartwatch1 -->
+          <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+            <div class="card" style="width:90%;">
+              <img src="images/smartwatch1.jpg" class="card-img-top"
+                style="width: 100%; height: 60%; object-fit: contain;" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Apple Watch Series 10 42mm GPS Jet Black Aluminum Case</h5>
+                <p class="card-text">₨ 87,999</p>
+                <br>
+                <span class="productbtn">
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <!-- info button -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal9">
+                    Info
+                  </button>
+
+                  <!--product info  -->
+                  <div class="modal fade" id="productModal9" tabindex="-1" aria-labelledby="productModalLabel9"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="productModalLabel9" style="text-align: center;">Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          42mm Jet Black Aluminum Case – Polished Jet Black aluminum finish with a sleek, reflective
+                          appearance.
+                          Always-On Retina Display – LTPO3 OLED wide-angle display with up to 2,000 nits peak
+                          brightness.
+                          374 × 446 Resolution – 42mm display with 989mm² display area.
+                          S10 SiP Chip – 64-bit dual-core processor with a 4-core Neural Engine.
+                          64GB Storage – Built-in storage for apps and compatible content.
+                          Advanced Health Tracking – ECG, heart-rate monitoring, high/low heart-rate notifications,
+                          irregular rhythm notifications and temperature sensing.
+                          Sleep Tracking & Sleep Apnea Notifications – Tracks sleep stages and supports sleep apnea
+                          notifications.
+                          Vitals App – Provides overnight health metrics including heart rate and respiratory rate.
+                          Advanced Fitness Tracking – Activity Rings, workout tracking and training-load insights.
+                          GPS Connectivity – Built-in GPS with support for GPS, GLONASS, Galileo, QZSS and BeiDou.
+                          Bluetooth 5.3 & Wi-Fi – Reliable wireless connectivity with compatible devices.
+                          50m Water Resistance – Suitable for swimming and everyday water exposure.
+                          Depth & Water Temperature Sensors – Supports depth and water-temperature measurements for
+                          compatible water activities.
+                          Double Tap Gesture – Perform supported actions using the double-tap gesture.
+                          Crash & Fall Detection – Built-in safety features designed to assist in emergencies.
+                          Up to 18 Hours Battery Life – Up to 36 hours in Low Power Mode.
+                          Fast Charging – Up to 80% charge in around 30 minutes under Apple’s specified conditions.
+                          Weight: Approximately 30g for the 42mm GPS aluminum model.
+                          Compatibility: Requires a compatible iPhone; Apple specifies iPhone XS or later with the
+                          required iOS version
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- smartwatch2-->
+          <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+            <div class="card" style="width: 90%;">
+              <img src="images/smartwatch2.jpg" class="card-img-top"
+                style="width: 100%; height: 60%;object-fit: contain;" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Apple Watch Ultra 4 49mm GPS + Cellular – Black Titanium, Burgundy Alpine Loop
+                </h5>
+                <p class="card-text">₨ 299,999</p>
+                <span class="productbtn">
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <!-- info button -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal10">
+                    Info
+                  </button>
+
+                  <!--product info  -->
+                  <div class="modal fade" id="productModal10" tabindex="-1" aria-labelledby="productModalLabel10"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="productModalLabel10">Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">49mm Black Titanium Case – Durable titanium construction with a black
+                          finish.
+                          Burgundy Alpine Loop – Alpine Loop band in Apple’s Burgundy color.
+                          GPS + Cellular – Stay connected for calls, messages and supported services without always
+                          having your iPhone nearby.
+                          S11 Chip – Apple’s latest-generation S11 chip for Apple Watch Ultra 4.
+                          Always-On Retina Display – Large, bright display designed for clear viewing during everyday
+                          use and outdoor activities.
+                          Up to 50 Hours Battery Life – Up to 50 hours of everyday battery life; Low Power Mode extends
+                          this to up to 84 hours. Apple
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- smartwatch3 -->
+          <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+            <div class="card" style="width: 90%;">
+              <img src="images/smartwatch3.jpg" style="width: 100%; height: 60%; object-fit: contain;"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Zero Visionary Smartwatch</h5>
+                <p class="card-text">₨ 12,099</p>
+                <br><br>
+                <span class="productbtn">
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <!-- info button -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal11">
+                    Info
+                  </button>
+
+                  <!--product info  -->
+                  <div class="modal fade" id="productModal11" tabindex="-1" aria-labelledby="productModalLabel11"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="productModalLabel11">Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          1.85-inch AMOLED HD Full-Touch Display for vibrant colors and sharp visuals
+                          Always-On Display for convenient time and information visibility
+                          Bluetooth 5.3 with Bluetooth Calling support
+                          Clear Bluetooth Calling directly from your wrist
+                          Customizable Watch Faces with built-in and cloud-based designs
+                          Heart Rate Monitoring for everyday wellness tracking
+                          SpO₂ Monitoring for blood oxygen tracking
+                          Sleep Analysis for tracking sleep patterns
+                          Female Health Tracking
+                          Multiple Sports & Fitness Modes for activity tracking
+                          Smart Notifications for calls, text messages, WhatsApp and supported apps
+                          Music Control & Camera Control
+                          Weather Updates, Alarm & Other Smart Functions
+                          IP68 Water Resistance for protection against sweat, rain and everyday splashes
+                          Up to 15 Days Typical Battery Life depending on usage
+                          Magnetic Charging Cable
+                          Android & iOS Compatibility
+                          Available Colors/Straps: Starlight Silicone, Black Silicone, Brown Silicone, Rainbow, Olive
+                          Green Silicone, Blue Leather & Orange Silicone
+                          1-Year Warranty
+                          Package Includes: Smartwatch, magnetic charging cable, user manual & warranty card
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- smartwatch4 -->
+          <div class="col-lg-3 col-md-4 col-12 d-flex justify-content-center">
+            <div class="card" style="width: 90%;">
+              <img src="images/smartwatch4.jpg" style="width: 100%; height: 60%; object-fit: contain;"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Amazfit Cheetah 2 Ultra Smartwatch</h5>
+                <p class="card-text">₨ 169,999</p>
+                <br>
+                <span class="productbtn">
+                  <a href="#" class="btn btn-primary">Add to cart</a>
+                  <!-- info button -->
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#productModal12">
+                    Info
+                  </button>
+
+                  <!--product info  -->
+                  <div class="modal fade" id="productModal12" tabindex="-1" aria-labelledby="productModalLabel12"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="productModalLabel12">Details</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          1.5″ AMOLED Display – 480 × 480 resolution with up to 3,000 nits peak brightness.
+                          Sapphire Glass – Premium scratch-resistant display protection.
+                          Grade 5 Titanium Construction – Titanium bezel, frame, back cover and buttons for a strong yet
+                          lightweight design.
+                          64GB Storage – Large onboard storage for supported maps and data.
+                          Dual-Band GPS – Supports 6 satellite positioning systems for accurate outdoor tracking.
+                          Full-Color Contour Maps – Detailed maps with offline navigation capabilities.
+                          Turn-by-Turn Navigation – Follow routes directly from the watch with supported navigation
+                          features.
+                          Automatic Rerouting – Recalculates routes when you move off course.
+                          180+ Sports Modes – Includes trail running, HYROX, strength training and other activities.
+                          Advanced Running Features – Running power, lactate threshold, ground contact time, virtual
+                          pacer and Track Run mode.
+                          BioTracker™ PPG Sensor – 24/7 tracking of heart rate, blood oxygen, stress and sleep-related
+                          metrics.
+                          RestoreIQ™ – Detailed sleep and recovery insights.
+                          One-Tap Measuring – Measures supported heart rate, blood oxygen, stress and breathing rate
+                          metrics together.
+                          780mAh Battery – Up to 30 days typical use.
+                          Trail Running Battery – Up to 33 hours in Trail Running mode.
+                          GPS Battery Life – Up to 60 hours in Accuracy GPS mode and up to 228 hours in maximum
+                          battery-saving GPS mode.
+                          5 ATM Water Resistance – Designed for swimming and everyday water exposure within its rating.
+                          Red & White Flashlight – Built-in flashlight for additional visibility.
+                          Built-in Speaker & Microphone – Supports compatible calling and audio functions.
+                          Bluetooth 5.2 & 2.4GHz Wi-Fi – Wireless connectivity for supported functions.
+                          Zepp App Support – Compatible with Android 7.0+ and iOS 15.0+.
+                          Colors: Titanium body with Black Silicone and Striped Green Nylon straps.
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cart Notification -->
+        <div class="toast-container position-fixed top-0 end-0 p-3">
+          <div id="cartToast" class="toast text-bg-success border-0" role="alert" aria-live="assertive"
+            aria-atomic="true">
+
+            <div class="d-flex">
+              <div class="toast-body" id="cartToastMessage">
+                Item added to cart!
+              </div>
+
+              <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
+            </div>
+
+          </div>
+        </div>
+
+<!-- Scrolling Bottom Bar -->
+<div class="bottom-scroll-bar">
+  <div class="scroll-content">
+    📍 <span id="userlocation">Getting location...</span>
+    🕐 <span id="liveTime">00:00:00</span>
+  </div>
+</div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+          crossorigin="anonymous"></script>
+
+        <script>
+          const cartButtons = document.querySelectorAll(
+            '.productbtn .btn-primary:first-child'
+          );
+
+          const cartToastElement = document.getElementById('cartToast');
+          const cartToastMessage = document.getElementById('cartToastMessage');
+
+          const cartToast = new bootstrap.Toast(cartToastElement);
+
+          cartButtons.forEach(button => {
+            button.addEventListener('click', function (event) {
+              event.preventDefault();
+
+              const card = this.closest('.card');
+              const productName = card.querySelector('.card-title').textContent;
+
+              cartToastMessage.textContent =
+                `${productName} added to cart!`;
+
+              cartToast.show();
+            });
+          });
+          // Visitor count
+  let visitors = localStorage.getItem("visitorCount");
+
+  if (!visitors) {
+    visitors = 1;
+  } else {
+    visitors = Number(visitors) + 1;
+  }
+
+  localStorage.setItem("visitorCount", visitors);
+
+  document.getElementById("visitorCount").textContent = visitors;
+
+
+  // Live Pakistan time
+  function updateTime() {
+    const time = new Date().toLocaleTimeString("en-PK", {
+      timeZone: "Asia/Karachi",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit"
+    });
+
+    document.getElementById("liveTime").textContent = time;
+  }
+
+  updateTime();
+
+  setInterval(updateTime, 1000);
+
+
+  function getLocation() {
+    const locationText = document.getElementById("userlocation");
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            function(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                locationText.textContent =
+                    `Lat: ${latitude.toFixed(4)}, Long: ${longitude.toFixed(4)}`;
+            },
+            function(error) {
+                locationText.textContent = "Location unavailable";
+                console.log(error);
+            }
+        );
+    } else {
+        locationText.textContent = "Geolocation not supported";
+    }
+}
+
+getLocation();
+        </script>
+
+</body>
+
+</html>
