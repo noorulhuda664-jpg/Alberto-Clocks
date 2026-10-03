@@ -65,7 +65,12 @@
             </li>
           </ul>
         </div>
-        <li><i class="fa-solid fa-cart-shopping"></i></li>
+        <li>
+  <a href="cart.html" style="color: inherit; text-decoration: none;">
+    <i class="fa-solid fa-cart-shopping"></i>
+  </a>
+</li>
+
       </div>
   </nav>
   <!-- header image -->
@@ -701,28 +706,105 @@
           crossorigin="anonymous"></script>
 
         <script>
-          const cartButtons = document.querySelectorAll(
-            '.productbtn .btn-primary:first-child'
-          );
+          
+  const cartButtons = document.querySelectorAll(
+    '.productbtn .btn-primary:first-child'
+  );
 
-          const cartToastElement = document.getElementById('cartToast');
-          const cartToastMessage = document.getElementById('cartToastMessage');
+  const cartToastElement = document.getElementById('cartToast');
+  const cartToastMessage = document.getElementById('cartToastMessage');
+  const cartToast = new bootstrap.Toast(cartToastElement);
 
-          const cartToast = new bootstrap.Toast(cartToastElement);
+  // Get existing cart
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-          cartButtons.forEach(button => {
-            button.addEventListener('click', function (event) {
-              event.preventDefault();
+  cartButtons.forEach(button => {
+    button.addEventListener('click', function (event) {
+      event.preventDefault();
 
-              const card = this.closest('.card');
-              const productName = card.querySelector('.card-title').textContent;
+      const card = this.closest('.card');
 
-              cartToastMessage.textContent =
-                `${productName} added to cart!`;
+      const productName =
+        card.querySelector('.card-title').textContent.trim();
 
-              cartToast.show();
-            });
-          });
+      const productPrice =
+        card.querySelector('.card-text').textContent.trim();
+
+      const productImage =
+        card.querySelector('.card-img-top').getAttribute('src');
+
+      // Create unique product ID from name
+      const productId = productName
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-');
+
+      // Check if product already exists
+      const existingProduct = cart.find(
+        product => product.id === productId
+      );
+
+      if (existingProduct) {
+        existingProduct.quantity += 1;
+      } else {
+        cart.push({
+          id: productId,
+          name: productName,
+          price: productPrice,
+          image: productImage,
+          quantity: 1
+        });
+      }
+
+      // Save cart
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      // Show notification
+      cartToastMessage.textContent =
+        `${productName} added to cart!`;
+
+      cartToast.show();
+
+      // Update cart count
+      updateCartCount();
+    });
+  });
+
+
+  // Update cart icon count
+  function updateCartCount() {
+    const cartCount = cart.reduce(
+      (total, product) => total + product.quantity,
+      0
+    );
+
+    const cartIcon = document.querySelector('.fa-cart-shopping');
+
+    if (cartIcon) {
+      let countBadge = document.getElementById('cartCount');
+
+      if (!countBadge) {
+        countBadge = document.createElement('span');
+        countBadge.id = 'cartCount';
+
+        countBadge.style.position = 'absolute';
+        countBadge.style.background = 'red';
+        countBadge.style.color = 'white';
+        countBadge.style.borderRadius = '50%';
+        countBadge.style.fontSize = '12px';
+        countBadge.style.padding = '2px 6px';
+        countBadge.style.marginLeft = '-8px';
+        countBadge.style.marginTop = '-10px';
+
+        cartIcon.parentElement.style.position = 'relative';
+        cartIcon.parentElement.appendChild(countBadge);
+      }
+
+      countBadge.textContent = cartCount;
+    }
+  }
+
+  updateCartCount();
+
           // Visitor count
   let visitors = localStorage.getItem("visitorCount");
 
