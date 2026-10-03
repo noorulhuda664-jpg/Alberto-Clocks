@@ -135,6 +135,23 @@
       color: #198754;
     }
 
+    /* EMPTY CART */
+
+    .empty-checkout {
+      display: none;
+      text-align: center;
+      background: white;
+      padding: 70px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .empty-checkout i {
+      font-size: 70px;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
     /* SUCCESS */
 
     .success-message {
@@ -185,86 +202,57 @@
     <div class="container-fluid">
 
       <div class="logo-area">
-
         <a class="navbar-brand" href="index.html">
-
           <img
             src="images/pngtree-clock-icon-simple-flat-vector-png-image_12244605.png"
             alt="Alberto Clocks"
             width="50"
             height="50">
-
         </a>
-
       </div>
-
 
       <button
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbarNav">
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
 
         <span class="navbar-toggler-icon">
-
           <i class="fa-solid fa-bars"></i>
-
         </span>
 
       </button>
 
-
-      <div
-        class="collapse navbar-collapse"
-        id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav">
 
         <ul class="navbar-nav">
 
           <li class="nav-item">
-
-            <a class="nav-link" href="index.html">
-              Home
-            </a>
-
+            <a class="nav-link" href="index.html">Home</a>
           </li>
 
           <li class="nav-item">
-
-            <a class="nav-link" href="shop.html">
-              Shop
-            </a>
-
+            <a class="nav-link" href="shop.html">Shop</a>
           </li>
 
           <li class="nav-item">
-
-            <a class="nav-link" href="cart.html">
-              Cart
-            </a>
-
+            <a class="nav-link" href="cart.html">Cart</a>
           </li>
 
         </ul>
 
-
         <div class="ms-auto">
-
           <a
             href="cart.html"
             style="color: inherit; text-decoration: none; font-size: 22px;">
 
             <i class="fa-solid fa-cart-shopping"></i>
 
-            <span
-              id="cartCount"
-              class="badge bg-danger">
-
-              0
-
-            </span>
-
+            <span id="cartCount" class="badge bg-danger">0</span>
           </a>
-
         </div>
 
       </div>
@@ -280,9 +268,22 @@
 
     <div class="container">
 
-      <h1 class="page-title">
-        Checkout
-      </h1>
+      <h1 class="page-title">Checkout</h1>
+
+
+      <!-- EMPTY CART MESSAGE -->
+
+      <div class="empty-checkout" id="emptyCheckout">
+
+        <i class="fa-solid fa-cart-shopping"></i>
+
+        <h2>Your cart is empty</h2>
+
+        <p>Add a watch to your cart before checking out.</p>
+
+        <a href="shop.html" class="btn btn-primary">Go Shopping</a>
+
+      </div>
 
 
       <!-- CHECKOUT CONTENT -->
@@ -309,9 +310,7 @@
 
                   <div class="col-md-6 mb-3">
 
-                    <label class="form-label">
-                      First Name *
-                    </label>
+                    <label class="form-label" for="firstName">First Name *</label>
 
                     <input
                       type="text"
@@ -324,9 +323,7 @@
 
                   <div class="col-md-6 mb-3">
 
-                    <label class="form-label">
-                      Last Name *
-                    </label>
+                    <label class="form-label" for="lastName">Last Name *</label>
 
                     <input
                       type="text"
@@ -341,9 +338,7 @@
 
                 <div class="mb-3">
 
-                  <label class="form-label">
-                    Email Address *
-                  </label>
+                  <label class="form-label" for="email">Email Address *</label>
 
                   <input
                     type="email"
@@ -357,33 +352,29 @@
 
                 <div class="mb-3">
 
-                  <label class="form-label">
-                    Phone Number *
-                  </label>
+                  <label class="form-label" for="phone">Phone Number *</label>
 
                   <input
                     type="tel"
                     class="form-control"
                     id="phone"
                     placeholder="03XX-XXXXXXX"
+                    pattern="03[0-9]{2}-?[0-9]{7}"
+                    title="Enter a Pakistani mobile number like 0300-1234567"
                     required>
 
                 </div>
 
 
                 <h3 class="mt-4">
-
                   <i class="fa-solid fa-location-dot"></i>
                   Delivery Address
-
                 </h3>
 
 
                 <div class="mb-3">
 
-                  <label class="form-label">
-                    Address *
-                  </label>
+                  <label class="form-label" for="address">Address *</label>
 
                   <textarea
                     class="form-control"
@@ -399,9 +390,7 @@
 
                   <div class="col-md-6 mb-3">
 
-                    <label class="form-label">
-                      City *
-                    </label>
+                    <label class="form-label" for="city">City *</label>
 
                     <input
                       type="text"
@@ -415,9 +404,7 @@
 
                   <div class="col-md-6 mb-3">
 
-                    <label class="form-label">
-                      Postal Code
-                    </label>
+                    <label class="form-label" for="postalCode">Postal Code</label>
 
                     <input
                       type="text"
@@ -433,10 +420,8 @@
                 <!-- PAYMENT -->
 
                 <h3 class="mt-4">
-
                   <i class="fa-solid fa-credit-card"></i>
                   Payment Method
-
                 </h3>
 
 
@@ -450,9 +435,7 @@
 
                   <i class="fa-solid fa-money-bill-wave"></i>
 
-                  <strong>
-                    Cash on Delivery
-                  </strong>
+                  <strong>Cash on Delivery</strong>
 
                   <br>
 
@@ -463,10 +446,6 @@
                 </label>
 
 
-                
-
-                
-
                 <div class="form-check mt-4">
 
                   <input
@@ -475,12 +454,8 @@
                     id="terms"
                     required>
 
-                  <label
-                    class="form-check-label"
-                    for="terms">
-
+                  <label class="form-check-label" for="terms">
                     I agree to the terms and conditions.
-
                   </label>
 
                 </div>
@@ -488,14 +463,13 @@
 
                 <button
                   type="submit"
+                  id="placeOrderBtn"
                   class="btn btn-success btn-lg w-100 mt-4">
 
                   <i class="fa-solid fa-check"></i>
-
                   Place Order
 
                 </button>
-
 
               </form>
 
@@ -510,75 +484,34 @@
 
             <div class="order-summary">
 
-              <h3>
-                Your Order
-              </h3>
+              <h3>Your Order</h3>
 
               <hr>
-
 
               <div id="orderProducts"></div>
 
+              <hr>
+
+              <div class="d-flex justify-content-between">
+                <span>Items</span>
+                <span id="summaryItems">0</span>
+              </div>
+
+              <div class="d-flex justify-content-between mt-2">
+                <span>Subtotal</span>
+                <span id="summarySubtotal">Rs. 0</span>
+              </div>
+
+              <div class="d-flex justify-content-between mt-2">
+                <span>Delivery</span>
+                <span class="text-success">Free</span>
+              </div>
 
               <hr>
 
-
               <div class="d-flex justify-content-between">
-
-                <span>
-                  Items
-                </span>
-
-                <span id="summaryItems">
-                  0
-                </span>
-
-              </div>
-
-
-              <div class="d-flex justify-content-between mt-2">
-
-                <span>
-                  Subtotal
-                </span>
-
-                <span id="summarySubtotal">
-                  Rs. 0
-                </span>
-
-              </div>
-
-
-              <div class="d-flex justify-content-between mt-2">
-
-                <span>
-                  Delivery
-                </span>
-
-                <span class="text-success">
-                  Free
-                </span>
-
-              </div>
-
-
-              <hr>
-
-
-              <div class="d-flex justify-content-between">
-
-                <strong>
-                  Total
-                </strong>
-
-                <span
-                  class="total"
-                  id="summaryTotal">
-
-                  Rs. 0
-
-                </span>
-
+                <strong>Total</strong>
+                <span class="total" id="summaryTotal">Rs. 0</span>
               </div>
 
             </div>
@@ -592,49 +525,24 @@
 
       <!-- SUCCESS MESSAGE -->
 
-      <div
-        class="success-message"
-        id="successMessage">
+      <div class="success-message" id="successMessage">
 
         <i class="fa-solid fa-circle-check success-icon"></i>
 
-        <h1>
-          Order Placed Successfully!
-        </h1>
+        <h1>Order Placed Successfully!</h1>
 
-        <p>
-          Thank you for shopping with Alberto Clocks.
-        </p>
-
+        <p>Thank you for shopping with Alberto Clocks.</p>
 
         <div class="order-number">
-
           Order Number:
           <span id="orderNumber"></span>
-
         </div>
 
+        <p>We will contact you shortly to confirm your order.</p>
 
-        <p>
-          We will contact you shortly to confirm your order.
-        </p>
+        <a href="shop.html" class="btn btn-primary">Continue Shopping</a>
 
-
-        <a
-          href="shop.html"
-          class="btn btn-primary">
-
-          Continue Shopping
-
-        </a>
-
-        <a
-          href="index.html"
-          class="btn btn-outline-secondary ms-2">
-
-          Back to Home
-
-        </a>
+        <a href="index.html" class="btn btn-outline-secondary ms-2">Back to Home</a>
 
       </div>
 
@@ -646,37 +554,73 @@
   <script>
 
     // ==========================================
-    // GET CART
+    // HELPERS
     // ==========================================
 
-    let cart =
-      JSON.parse(localStorage.getItem("cart")) || [];
-
-
-    // ==========================================
-    // PRICE FUNCTION
-    // ==========================================
-
-    function getPrice(price) {
-
-      return Number(
-        price
-          .replace(/[^0-9.]/g, '')
-          .replace(/,/g, '')
-      );
-
+    // Turns old text prices ("Rs.3,413,000", "Rs.18,000.00", "₨ 87,999")
+    // into numbers. Only used to convert carts saved by the old version.
+    function parsePriceText(text) {
+      const cleaned = String(text)
+        .replace(/rs\.?|₨/gi, '')
+        .replace(/,/g, '')
+        .trim();
+      const value = parseFloat(cleaned);
+      return isNaN(value) ? 0 : value;
     }
 
-
-    // ==========================================
-    // FORMAT PRICE
-    // ==========================================
-
     function formatPrice(price) {
+      return "Rs. " + Number(price).toLocaleString("en-PK");
+    }
 
-      return "Rs. " +
-        price.toLocaleString("en-PK");
+    // Prevents names/paths from breaking the page HTML
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;");
+    }
 
+    // Load cart and convert any old-format items to the new format
+    function loadCart() {
+      let saved;
+
+      try {
+        saved = JSON.parse(localStorage.getItem("cart"));
+      } catch (e) {
+        saved = [];
+      }
+
+      if (!Array.isArray(saved)) {
+        saved = [];
+      }
+
+      let changed = false;
+
+      const cleanCart = saved.map(product => {
+
+        if (typeof product.price !== "number") {
+          product.displayPrice = product.displayPrice || String(product.price);
+          product.price = parsePriceText(product.price);
+          changed = true;
+        }
+
+        if (!product.displayPrice) {
+          product.displayPrice = formatPrice(product.price);
+          changed = true;
+        }
+
+        product.quantity = Math.max(1, parseInt(product.quantity, 10) || 1);
+
+        return product;
+      });
+
+      if (changed) {
+        localStorage.setItem("cart", JSON.stringify(cleanCart));
+      }
+
+      return cleanCart;
     }
 
 
@@ -686,117 +630,61 @@
 
     function displayOrder() {
 
-      const productsContainer =
-        document.getElementById("orderProducts");
+      const cart = loadCart();
 
-      productsContainer.innerHTML = "";
+      const checkoutContent = document.getElementById("checkoutContent");
+      const emptyCheckout = document.getElementById("emptyCheckout");
+      const productsContainer = document.getElementById("orderProducts");
 
-
-      // No products
+      // No products: hide the form, show the empty message
       if (cart.length === 0) {
-
-        productsContainer.innerHTML = `
-
-          <div class="text-center py-4">
-
-            <i
-              class="fa-solid fa-cart-shopping"
-              style="font-size:40px;color:#aaa;">
-            </i>
-
-            <p class="mt-3">
-              Your cart is empty.
-            </p>
-
-            <a
-              href="shop.html"
-              class="btn btn-primary">
-
-              Go Shopping
-
-            </a>
-
-          </div>
-
-        `;
-
+        checkoutContent.style.display = "none";
+        emptyCheckout.style.display = "block";
+        document.getElementById("cartCount").textContent = "0";
         return;
-
       }
 
+      emptyCheckout.style.display = "none";
+      checkoutContent.style.display = "block";
 
+      let html = "";
       let total = 0;
       let itemCount = 0;
 
-
       cart.forEach(product => {
 
-        const price =
-          getPrice(product.price);
-
-        const productTotal =
-          price * product.quantity;
-
+        const productTotal = product.price * product.quantity;
 
         total += productTotal;
-
         itemCount += product.quantity;
 
-
-        productsContainer.innerHTML += `
-
+        html += `
           <div class="order-product">
 
             <img
-              src="${product.image}"
-              alt="${product.name}">
-
+              src="${escapeHtml(product.image)}"
+              alt="${escapeHtml(product.name)}">
 
             <div class="flex-grow-1">
 
-              <div class="order-product-name">
+              <div class="order-product-name">${escapeHtml(product.name)}</div>
 
-                ${product.name}
+              <div>Quantity: ${product.quantity}</div>
 
-              </div>
-
-              <div>
-
-                Quantity:
-                ${product.quantity}
-
-              </div>
-
-              <div class="order-product-price">
-
-                ${formatPrice(productTotal)}
-
-              </div>
+              <div class="order-product-price">${formatPrice(productTotal)}</div>
 
             </div>
 
           </div>
-
         `;
-
       });
 
+      productsContainer.innerHTML = html;
 
-      document.getElementById("summaryItems")
-        .textContent = itemCount;
-
-
-      document.getElementById("summarySubtotal")
-        .textContent = formatPrice(total);
-
-
-      document.getElementById("summaryTotal")
-        .textContent = formatPrice(total);
-
-
-      document.getElementById("cartCount")
-        .textContent = itemCount;
-
+      document.getElementById("summaryItems").textContent = itemCount;
+      document.getElementById("summarySubtotal").textContent = formatPrice(total);
+      document.getElementById("summaryTotal").textContent = formatPrice(total);
+      document.getElementById("cartCount").textContent = itemCount;
     }
 
 
@@ -806,146 +694,90 @@
 
     document
       .getElementById("checkoutForm")
-      .addEventListener("submit", function(event) {
+      .addEventListener("submit", function (event) {
 
         event.preventDefault();
 
+        const cart = loadCart();
 
         // Make sure cart isn't empty
         if (cart.length === 0) {
-
-          alert(
-            "Your cart is empty. Please add a product first."
-          );
-
+          alert("Your cart is empty. Please add a product first.");
           window.location.href = "shop.html";
-
           return;
-
         }
 
+        // Stop double submissions
+        const placeOrderBtn = document.getElementById("placeOrderBtn");
+
+        if (placeOrderBtn.disabled) {
+          return;
+        }
+
+        placeOrderBtn.disabled = true;
 
         // Customer details
-
-        const firstName =
-          document.getElementById("firstName").value;
-
-        const lastName =
-          document.getElementById("lastName").value;
-
-        const email =
-          document.getElementById("email").value;
-
-        const phone =
-          document.getElementById("phone").value;
-
-        const address =
-          document.getElementById("address").value;
-
-        const city =
-          document.getElementById("city").value;
-
-        const postalCode =
-          document.getElementById("postalCode").value;
-
-
-        // Payment
-
-        const payment =
-          document.querySelector(
-            'input[name="payment"]:checked'
-          ).value;
-
-
-        // Generate order number
-
-        const orderNumber =
-          "ALB-" +
-          Date.now().toString().slice(-8);
-
-
-        // Calculate total
-
-        let total = 0;
-
-        cart.forEach(product => {
-
-          total +=
-            getPrice(product.price) *
-            product.quantity;
-
-        });
-
-
-        // Create order object
-
-        const order = {
-
-          orderNumber: orderNumber,
-
-          customer: {
-
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            phone: phone,
-
-            address: address,
-            city: city,
-            postalCode: postalCode
-
-          },
-
-          paymentMethod: payment,
-
-          products: cart,
-
-          total: total,
-
-          orderDate:
-            new Date().toISOString()
-
+        const customer = {
+          firstName: document.getElementById("firstName").value.trim(),
+          lastName: document.getElementById("lastName").value.trim(),
+          email: document.getElementById("email").value.trim(),
+          phone: document.getElementById("phone").value.trim(),
+          address: document.getElementById("address").value.trim(),
+          city: document.getElementById("city").value.trim(),
+          postalCode: document.getElementById("postalCode").value.trim()
         };
 
+        // Payment
+        const payment = document.querySelector(
+          'input[name="payment"]:checked'
+        ).value;
+
+        // Order number
+        const orderNumber = "ALB-" + Date.now().toString().slice(-8);
+
+        // Products and total
+        let total = 0;
+
+        const products = cart.map(product => {
+
+          const lineTotal = product.price * product.quantity;
+          total += lineTotal;
+
+          return {
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            displayPrice: product.displayPrice,
+            quantity: product.quantity,
+            lineTotal: lineTotal
+          };
+        });
+
+        // Order object
+        const order = {
+          orderNumber: orderNumber,
+          customer: customer,
+          paymentMethod: payment,
+          products: products,
+          total: total,
+          orderDate: new Date().toISOString()
+        };
 
         // Save order
-
-        localStorage.setItem(
-          "lastOrder",
-          JSON.stringify(order)
-        );
-
+        localStorage.setItem("lastOrder", JSON.stringify(order));
 
         // Clear cart
-
         localStorage.removeItem("cart");
 
-
-        // Hide checkout
-
-        document.getElementById(
-          "checkoutContent"
-        ).style.display = "none";
-
-
-        // Show success
-
-        document.getElementById(
-          "successMessage"
-        ).style.display = "block";
-
-
-        document.getElementById(
-          "orderNumber"
-        ).textContent = orderNumber;
-
+        // Hide checkout, show success
+        document.getElementById("checkoutContent").style.display = "none";
+        document.getElementById("successMessage").style.display = "block";
+        document.getElementById("orderNumber").textContent = orderNumber;
 
         // Reset cart count
+        document.getElementById("cartCount").textContent = "0";
 
-        document.getElementById(
-          "cartCount"
-        ).textContent = "0";
-
+        window.scrollTo(0, 0);
       });
 
 
@@ -956,7 +788,6 @@
     displayOrder();
 
   </script>
-
 
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
